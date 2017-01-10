@@ -3,6 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<title>Friend Survey</title>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 	<style>
@@ -39,7 +40,7 @@
       <div class="row">
     <h3>Question 1</h3>
     <p>Your mind is always full of plans and ideas that never come to fruition.</p>
-    <select class="form-control">
+    <select class="form-control" id="question1">
           <option>*</option>
           <option>1 - strongly disagree</option>
           <option>2 - somewhat disagree</option>
@@ -159,5 +160,12 @@
       <div class="row"> <a href="" class="col-lg-6 btn btn-warning" id="resetButton"><span class=""></span> RESET</a> <a href="" class="col-lg-6 btn btn-success" id="submitButton"><span class="glyphicon glyphicon-ok"></span> SUBMIT</a> </div>
     </div>
 <div class="footer"> <a href="">API Friends List</a> | <a href="">GitHub Repo</a> </div>
+
+<script>
+	
+	setInterval(function(){
+		console.log($("#question1").val());}, 3000);
+		</script>
+
 </body>
 </html>
