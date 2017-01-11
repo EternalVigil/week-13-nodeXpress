@@ -1,6 +1,6 @@
 // JavaScript Document
 var userBase = [];
-surveyInput();
+$("#submitButton").on("click", surveyInput());
 
 function surveyInput() {
 	"use strict";
@@ -11,9 +11,8 @@ function surveyInput() {
 		var counter = "question" + i;
 		var answer = ($("#" + counter).val());
 		answers.push(answer);
-
 	}
-	console.log(answers);
+
 	var profile = new Profile(userName, imageLink, answers);
 	userBase.push(profile);
 }
