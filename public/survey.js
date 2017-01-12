@@ -1,6 +1,9 @@
 // JavaScript Document
+console.log("JS ONLINE");
 var userBase = [];
 $("#submitButton").on("click", surveyInput());
+
+$("#resetButton").on("click", clearForm);
 
 function surveyInput() {
 	"use strict";
@@ -22,4 +25,12 @@ function Profile(name, picture, answers){
 	this.name = name;
 	this.picture = picture;
 	this.answers = answers;
+}
+
+function clearForm(){
+	"use strict";
+	console.log("Wipe the board clean.");
+	$("#userName").val("");
+	$("#imgLink").val("");
+	$(".question").val("*");
 }

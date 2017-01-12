@@ -14,6 +14,18 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 app.use(express.static('public'));
 
+app.get("/", function(request, response){
+	"use strict";
+	console.log("Welcome Home.");
+	response.sendFile(path.join(__dirname, "/public/index.html"));
+});
+
+app.get("/survey", function(request, response){
+	"use strict";
+	console.log("Data of all I survey.");
+	response.sendFile(path.join(__dirname, "/public/survey.html"));
+});
+
 app.listen(PORT, () => {
 	"use strict";
   console.log('Server up on port: ', PORT);
