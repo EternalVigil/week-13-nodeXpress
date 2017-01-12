@@ -23,4 +23,8 @@ $.ajax({
 			bestMatch = i;
 		}
 	}
+	
+	$("#bestMatchName").val(data[bestMatch].name);
+	$("#profileImage").attr("src", data[bestMatch].imgLink);
+	$("#compareScore").val(compatibleScore);
 });
