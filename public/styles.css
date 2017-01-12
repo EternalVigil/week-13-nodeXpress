@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* CSS Document */
+#submitButton, #resetButton {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.footer {
+	position: fixed;
+	bottom: 5px;
+	left: 15px;
+	background-color: whitesmoke;
+}

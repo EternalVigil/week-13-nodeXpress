@@ -1,7 +1,7 @@
 // JavaScript Document
 console.log("JS ONLINE");
 var userBase = [];
-$("#submitButton").on("click", surveyInput());
+$("#submitButton").on("click", surveyInput);
 
 $("#resetButton").on("click", clearForm);
 
@@ -22,7 +22,8 @@ function surveyInput() {
 
 function Profile(name, picture, answers){
 	"use strict";
-	this.name = name;
+	this.name = $("#userName").val();
+	console.log(this.name);
 	this.picture = picture;
 	this.answers = answers;
 }

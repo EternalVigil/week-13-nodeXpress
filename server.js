@@ -26,6 +26,12 @@ app.get("/survey", function(request, response){
 	response.sendFile(path.join(__dirname, "/public/survey.html"));
 });
 
+app.get("/results", function(request, response){
+	"use strict";
+	console.log("I get results.");
+	response.sendFile(path.join(__dirname, "/public/results.html"));
+});
+
 app.listen(PORT, () => {
 	"use strict";
   console.log('Server up on port: ', PORT);
