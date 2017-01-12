@@ -1,6 +1,5 @@
 // JavaScript Document
 console.log("JS ONLINE");
-var userBase = [];
 $("#submitButton").on("click", surveyInput);
 
 $("#resetButton").on("click", clearForm);
@@ -13,22 +12,27 @@ function surveyInput() {
 	for (var i = 1; i < 11; i++) {
 		var counter = "question" + i;
 		var answer = ($("#" + counter).val());
+		answer = parseInt(answer.charAt(0));
+		console.log(answer);
 		answers.push(answer);
 	}
 
 	var profile = new Profile(userName, imageLink, answers);
-	userBase.push(profile);
+	$.post("http://localhost:3000/api/new", profile)
+	.done(function(data){
+		console.log(data);
+	});
+return false;
 }
 
-function Profile(name, picture, answers){
+function Profile(name, picture, answers) {
 	"use strict";
 	this.name = $("#userName").val();
-	console.log(this.name);
 	this.picture = picture;
 	this.answers = answers;
 }
 
-function clearForm(){
+function clearForm() {
 	"use strict";
 	console.log("Wipe the board clean.");
 	$("#userName").val("");
