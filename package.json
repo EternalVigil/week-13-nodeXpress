@@ -1,0 +1,25 @@
+{
+	"name": "week13express",
+	"version": "1.0.0",
+	"description": "Week 13 Node Express - Friend Finder",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/EternalVigil/week-13-nodeXpress.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/EternalVigil/week-13-nodeXpress/issues"
+	},
+	"homepage": "https://github.com/EternalVigil/week-13-nodeXpress#readme",
+	"dependencies": {
+		"express": "^4.14.0",
+		"bodyParser": "^1.15.2",
+		"path": "^0.12.7"
+	}
+}
